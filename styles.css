@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --color-ink: #0c0b09;
+  --color-paper: #f0ece4;
+  --color-paper-soft: #b8b0a2;
+  --accent: #c8a96e;
+  --accent-dim: #a0844f;
+  --bg-page: #111009;
+  --color-surface: #181611;
+  --color-surface-2: #201e18;
+  --fg-primary: #f0ece4;
+  --fg-secondary: #7a7468;
+  --fg-muted: #4a4640;
+  --color-hairline: rgba(240,236,228,0.10);
+  --color-hairline-2: rgba(240,236,228,0.06);
+  --gutter: clamp(24px, 5vw, 80px);
+  --wrap: 1320px;
+  --density: 1;
+  --t-base: 0.22s;
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg-page); color: var(--fg-primary); font: 400 16px/1.6 var(--font-body); min-height: 100vh; }
+img, svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+section { padding: calc(120px * var(--density)) 0; }
+.t-h2 { font: 500 clamp(36px, 4.5vw, 60px)/1.05 var(--font-display); letter-spacing: -0.015em; text-wrap: pretty; }
+.t-body { font: 300 clamp(15px, 1.4vw, 18px)/1.7 var(--font-body); color: var(--color-paper-soft); max-width: 52ch; }
+em { font-style: italic; }
+.section-label { display: block; font: 400 10.5px/1 var(--font-mono); letter-spacing: 0.22em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 40px; }
+.section-label--accent { color: var(--accent); }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; font: 400 12px/1 var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; border: 1px solid transparent; transition: all var(--t-base) var(--ease); white-space: nowrap; }
+.btn--primary { background: var(--accent); color: var(--color-ink); border-color: var(--accent); }
+.btn--primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); }
+.btn--ghost { background: transparent; color: var(--fg-primary); border-color: var(--color-hairline); }
+.btn--ghost:hover { border-color: var(--fg-secondary); }
+.link-ghost { font: 400 12px/1 var(--font-mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--fg-secondary); border-bottom: 1px solid var(--color-hairline); padding-bottom: 4px; transition: color var(--t-base) var(--ease), border-color var(--t-base) var(--ease); }
+.link-ghost:hover { color: var(--accent); border-color: var(--accent); }
+.site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; border-bottom: 1px solid var(--color-hairline); background: rgba(17,16,9,0.92); backdrop-filter: blur(12px); }
+.site-header__inner { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); height: 72px; display: flex; align-items: center; gap: 40px; }
+.site-header__mark { font: 500 italic clamp(18px,1.6vw,22px)/1 var(--font-display); letter-spacing: -0.01em; color: var(--color-paper); flex-shrink: 0; }
+.mark-dot { color: var(--accent); }
+.site-nav { display: flex; gap: 36px; margin-left: auto; }
+.site-nav a { font: 400 11px/1 var(--font-mono); letter-spacing: 0.18em; text-transform: uppercase; color: var(--fg-secondary); transition: color var(--t-base) var(--ease); }
+.site-nav a:hover, .site-nav a.active { color: var(--fg-primary); }
+.site-nav a.active { color: var(--accent); }
+.site-header .btn { margin-left: 24px; padding: 11px 22px; font-size: 10.5px; }
+main { padding-top: 72px; }
+.site-footer { border-top: 1px solid var(--color-hairline); padding: 80px 0 48px; background: var(--color-surface); }
+.site-footer__row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--color-hairline); margin-bottom: 40px; }
+.site-footer__brand { display: flex; flex-direction: column; gap: 20px; }
+.site-footer__mark { font: 500 italic 20px/1 var(--font-display); letter-spacing: -0.01em; color: var(--color-paper); }
+.site-footer__quote { font: 300 italic 14px/1.5 var(--font-body); color: var(--fg-muted); max-width: 28ch; }
+.footer-col h4 { font: 400 10px/1 var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-muted); margin-bottom: 20px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 12px; }
+.footer-col a { font: 300 14px/1 var(--font-body); color: var(--fg-secondary); transition: color var(--t-base) var(--ease); }
+.footer-col a:hover { color: var(--fg-primary); }
+.footer-col a.cta { color: var(--accent); }
+.site-footer__meta { display: flex; justify-content: space-between; align-items: center; font: 400 10px/1 var(--font-mono); letter-spacing: 0.15em; text-transform: uppercase; color: var(--fg-muted); }
+.form-field { display: flex; flex-direction: column; gap: 8px; }
+.form-field label { font: 400 10px/1 var(--font-mono); letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-muted); }
+.form-field input, .form-field select, .form-field textarea { background: var(--color-surface-2); border: 1px solid var(--color-hairline); color: var(--fg-primary); font: 300 15px/1 var(--font-body); padding: 14px 18px; outline: none; transition: border-color var(--t-base) var(--ease); width: 100%; -webkit-appearance: none; }
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--accent); }
+.form-field textarea { resize: vertical; min-height: 140px; line-height: 1.6; }
+@media (max-width: 1080px) { :root { --density: 0.85; } }
+@media (max-width: 768px) { :root { --density: 0.7; } .site-nav { display: none; } .site-header .btn { margin-left: auto; } .site-footer__row { grid-template-columns: 1fr 1fr; gap: 40px; } .site-footer__brand { grid-column: 1 / -1; } }

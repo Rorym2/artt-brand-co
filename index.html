@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artt Brand Company — Strategy-first branding for established small businesses</title>
+<meta name="description" content="A boutique brand strategy practice for established small businesses. Positioning, voice, and the identity system that connects them.">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero{padding-top:calc(160px * var(--density));padding-bottom:calc(180px * var(--density))}
+.hero__hed{font:500 clamp(56px,9vw,132px)/.96 var(--font-display);letter-spacing:-.02em;margin:0 0 40px;max-width:14ch;text-wrap:balance}
+.hero__hed em{font-style:italic;color:var(--accent)}
+.hero__lede{font:300 clamp(18px,1.6vw,22px)/1.55 var(--font-body);margin:0 0 56px;max-width:52ch;color:var(--color-paper-soft)}
+.hero__cta-row{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero__quiet{font:400 11px/1.4 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted)}
+.hero__quiet b{color:var(--accent);font-weight:400}
+.meta-strip{border-top:1px solid var(--color-hairline);border-bottom:1px solid var(--color-hairline);padding:22px 0}
+.meta-strip__inner{display:flex;align-items:center;gap:48px;flex-wrap:wrap;font:400 11px/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-secondary)}
+.meta-strip__inner>span:first-child{color:var(--accent)}
+.problem{background:var(--bg-page)}
+.problem__grid{display:grid;grid-template-columns:1fr 1fr;gap:96px}
+.problem__hed{font:500 clamp(36px,4.2vw,56px)/1.06 var(--font-display);letter-spacing:-.01em;margin:0 0 28px;max-width:18ch}
+.problem__symptoms{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;border-top:1px solid var(--color-hairline)}
+.problem__symptoms li{display:grid;grid-template-columns:60px 1fr;gap:24px;padding:26px 0;border-bottom:1px solid var(--color-hairline);align-items:baseline}
+.problem__num{font:400 11px/1 var(--font-mono);letter-spacing:.2em;color:var(--fg-muted)}
+.problem__txt{font:500 clamp(20px,1.8vw,24px)/1.35 var(--font-display);color:var(--color-paper);margin:0}
+.who{background:var(--color-surface)}
+.who__head{display:grid;grid-template-columns:1fr 1.2fr;gap:96px;margin-bottom:80px;align-items:end}
+.who__cards{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.who-card{border-top:2px solid var(--color-paper);padding-top:28px;display:flex;flex-direction:column;gap:18px}
+.who-card--accent{border-top-color:var(--accent)}
+.who-card__num{font:400 11px/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted)}
+.who-card__hed{font:500 italic clamp(28px,2.6vw,36px)/1.18 var(--font-display);margin:0;max-width:16ch}
+.who-card__body{font:300 15px/1.78 var(--font-body);color:var(--color-paper-soft);margin:0;max-width:38ch}
+.who-card__signs{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--color-hairline-2);padding-top:18px}
+.who-card__signs li{display:grid;grid-template-columns:14px 1fr;gap:12px;font:300 14px/1.6 var(--font-body);color:var(--fg-secondary)}
+.who-card__signs li::before{content:"·";color:var(--accent)}
+.services-idx{background:var(--bg-page)}
+.services-idx__head{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:end;margin-bottom:72px}
+.services-idx__list{list-style:none;padding:0;margin:0;border-top:1px solid var(--color-hairline)}
+.svc-row{display:grid;grid-template-columns:80px 1fr 1.6fr 200px;gap:48px;padding:44px 0;border-bottom:1px solid var(--color-hairline);align-items:baseline;transition:padding-left .22s}
+.svc-row:hover{padding-left:8px}
+.svc-row__num{font:400 11px/1 var(--font-mono);letter-spacing:.2em;color:var(--fg-muted)}
+.svc-row__num.is-accent{color:var(--accent)}
+.svc-row__title{font:500 clamp(28px,2.8vw,38px)/1.1 var(--font-display);letter-spacing:-.01em;margin:0}
+.svc-row__body{font:300 15px/1.7 var(--font-body);color:var(--color-paper-soft);margin:0;max-width:50ch}
+.svc-row__meta{font:400 10.5px/1.6 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-secondary);text-align:right}
+.svc-row__meta b{color:var(--color-paper);font-weight:400;display:block;margin-bottom:4px}
+.quotes{background:var(--bg-page);padding-top:calc(60px * var(--density))}
+.quotes__inner{border-top:1px solid var(--color-hairline);padding-top:80px}
+.quotes__list{display:grid;grid-template-columns:1fr;gap:96px}
+.quote{display:grid;grid-template-columns:200px 1fr 240px;gap:56px;align-items:start}
+.quote__num{font:400 11px/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted)}
+.quote__num b{color:var(--accent);font-weight:400;display:block;margin-top:8px}
+.quote__body{font:500 italic clamp(28px,2.8vw,40px)/1.28 var(--font-display);color:var(--color-paper);margin:0;max-width:22ch}
+.quote__body::before{content:"\201C";color:var(--accent);margin-right:4px}
+.quote__body::after{content:"\201D";color:var(--accent)}
+.quote__attr{border-top:1px solid var(--color-hairline-2);padding-top:16px}
+.quote__name{font:400 13px/1.4 var(--font-body);color:var(--color-paper);margin:0 0 6px}
+.quote__role{font:400 10px/1.5 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-secondary);margin:0}
+.cta-band{border-top:1px solid var(--color-hairline);padding:calc(140px * var(--density)) 0}
+.cta-band__grid{display:grid;grid-template-columns:1.4fr 1fr;gap:96px;align-items:end}
+.cta-band__hed{font:500 clamp(48px,7vw,96px)/.98 var(--font-display);letter-spacing:-.02em;margin:0 0 24px;max-width:14ch}
+.cta-band__hed em{font-style:italic;color:var(--accent)}
+.cta-band__lede{font:300 clamp(16px,1.4vw,19px)/1.6 var(--font-body);color:var(--color-paper-soft);margin:0;max-width:38ch}
+.cta-band__side{display:flex;flex-direction:column;gap:32px;border-left:1px solid var(--color-hairline);padding-left:48px}
+.cta-band__side dl{margin:0;display:flex;flex-direction:column;gap:18px}
+.cta-band__side dt{font:400 10px/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted);margin-bottom:4px}
+.cta-band__side dd{font:300 15px/1.5 var(--font-body);color:var(--color-paper);margin:0}
+.cta-band__side dd em{font-family:var(--font-display);font-style:italic;color:var(--accent);font-size:1.1em}
+@media(max-width:880px){.problem__grid,.who__head,.who__cards,.services-idx__head,.cta-band__grid{grid-template-columns:1fr;gap:48px}.svc-row{grid-template-columns:1fr;gap:16px}.svc-row__meta{text-align:left}.quote{grid-template-columns:1fr;gap:28px}.cta-band__side{border-left:0;padding-left:0;border-top:1px solid var(--color-hairline);padding-top:32px}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="site-header__inner">
+  <a class="site-header__mark" href="index.html">Artt<span class="mark-dot">.</span></a>
+  <nav class="site-nav">
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <a class="btn btn--primary" href="contact.html">Book a brand audit</a>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+  <span class="section-label section-label--accent" style="margin-bottom:64px">Artt Brand Company &nbsp;·&nbsp; Est. 2019</span>
+  <h1 class="hero__hed">Your business has outgrown your brand. <em>Let's fix that.</em></h1>
+  <p class="hero__lede">A strategy-first branding practice for established small businesses. We rebuild positioning, voice, and the identity system that connects them — so the marketing you're already paying for finally starts working.</p>
+  <div class="hero__cta-row">
+    <a class="btn btn--primary" href="contact.html">Book a free brand audit &nbsp;→</a>
+    <a class="btn btn--ghost" href="#how">See how the work runs</a>
+    <span class="hero__quiet"><b>3 engagement slots</b> &nbsp;·&nbsp; Q3 2026</span>
+  </div>
+</div></section>
+<div class="meta-strip"><div class="wrap meta-strip__inner">
+  <span>What we do</span><span>Brand strategy</span><span>·</span><span>Positioning &amp; voice</span><span>·</span><span>Identity systems</span><span>·</span><span>For established small businesses</span>
+</div></div>
+<section class="problem"><div class="wrap"><div class="problem__grid">
+  <div>
+    <span class="section-label">02 — The pattern</span>
+    <h2 class="problem__hed">If your marketing isn't landing, the problem usually <em>isn't the marketing.</em></h2>
+    <p class="t-body">Most rebrands start in the wrong place. New visuals on top of old positioning produce a more polished version of the same confusion. Strategy first means we figure out what the brand is actually saying — then we make it visible.</p>
+  </div>
+  <ul class="problem__symptoms">
+    <li><span class="problem__num">01</span><p class="problem__txt">Your ads are getting clicks, but the conversations after them stall.</p></li>
+    <li><span class="problem__num">02</span><p class="problem__txt">Your team can't agree on what the company is for — so every page reads slightly differently.</p></li>
+    <li><span class="problem__num">03</span><p class="problem__txt">You've outgrown the brand you started with, but a refresh feels like risking the customers who know you.</p></li>
+    <li><span class="problem__num">04</span><p class="problem__txt">Every new piece of marketing turns into a creative debate, because there's no system to point at.</p></li>
+  </ul>
+</div></div></section>
+<section class="who"><div class="wrap">
+  <span class="section-label section-label--accent">03 — Who we work with</span>
+  <div class="who__head">
+    <h2 class="t-h2">Two kinds of founders. Same underlying problem.</h2>
+    <p class="t-body">The work is the same — get the strategy right, then make it visible. The difference is what you walk in with.</p>
+  </div>
+  <div class="who__cards">
+    <article class="who-card who-card--accent">
+      <span class="who-card__num">A — The marketing isn't landing</span>
+      <h3 class="who-card__hed">You're spending on ads. The traffic comes. The pipeline doesn't.</h3>
+      <p class="who-card__body">You've tested copy, channels, and creative. The numbers should be working and they aren't — because the brand under the ads is asking the wrong question.</p>
+      <ul class="who-card__signs"><li>You've been pitched a "messaging refresh" four times</li><li>Conversion rates plateaued 18 months ago</li><li>Your sales team rewrites the website in every demo</li></ul>
+    </article>
+    <article class="who-card">
+      <span class="who-card__num">B — You've outgrown the brand</span>
+      <h3 class="who-card__hed">The company you are now isn't the one your brand still describes.</h3>
+      <p class="who-card__body">It worked when you were starting out. Now the brand is quietly shrinking the room you've earned.</p>
+      <ul class="who-card__signs"><li>You cringe when you share your own website</li><li>You're attracting wrong-fit clients</li><li>You're ready to charge more but the brand doesn't support it</li></ul>
+    </article>
+  </div>
+</div></section>
+<section class="services-idx" id="how"><div class="wrap">
+  <span class="section-label">04 — Services</span>
+  <div class="services-idx__head">
+    <h2 class="t-h2">Three deliverables, sequenced. Most engagements include all three.</h2>
+    <p class="t-body">Each piece can stand on its own — but the strategy is what makes the identity legible, and the voice is what keeps the strategy alive after we're gone.</p>
+  </div>
+  <ol class="services-idx__list">
+    <li class="svc-row"><span class="svc-row__num is-accent">01</span><h3 class="svc-row__title">Brand <em>strategy</em></h3><p class="svc-row__body">Position, audience, voice. A written strategy you can actually use — not a deck you read once.</p><span class="svc-row__meta"><b>2 weeks</b>From $7,000</span></li>
+    <li class="svc-row"><span class="svc-row__num">02</span><h3 class="svc-row__title">Identity <em>system</em></h3><p class="svc-row__body">Logo, type, color, and the rules for when each one shows up. Built to last three years without updates.</p><span class="svc-row__meta"><b>3 weeks</b>From $9,000</span></li>
+    <li class="svc-row"><span class="svc-row__num">03</span><h3 class="svc-row__title">Voice &amp; <em>messaging</em></h3><p class="svc-row__body">Headline patterns, CTA library, voice rules, and a content engine you can run yourself.</p><span class="svc-row__meta"><b>2 weeks</b>From $5,500</span></li>
+  </ol>
+  <p style="margin-top:48px"><a class="link-ghost" href="services.html">See the full process &nbsp;→</a></p>
+</div></section>
+<section class="quotes"><div class="wrap"><div class="quotes__inner">
+  <span class="section-label">05 — What founders say</span>
+  <div class="quotes__list">
+    <article class="quote"><span class="quote__num">01<b>Strategy</b></span><blockquote class="quote__body">The strategy session was the first time in two years I'd heard our company described correctly out loud.</blockquote><div class="quote__attr"><p class="quote__name">Maren Holloway</p><p class="quote__role">Founder · Holloway &amp; Field</p></div></article>
+    <article class="quote"><span class="quote__num">02<b>Identity</b></span><blockquote class="quote__body">We rebranded twice before this. The difference is we stopped having to defend it the day it shipped.</blockquote><div class="quote__attr"><p class="quote__name">Devon Achi</p><p class="quote__role">CEO · Northsound Software</p></div></article>
+    <article class="quote"><span class="quote__num">03<b>Voice</b></span><blockquote class="quote__body">The voice document is the most-opened file in our company drive. That's the highest praise I can give.</blockquote><div class="quote__attr"><p class="quote__name">Cara Ibekwe</p><p class="quote__role">Co-founder · Tilt &amp; Co.</p></div></article>
+  </div>
+</div></div></section>
+<section class="cta-band"><div class="wrap"><div class="cta-band__grid">
+  <div>
+    <span class="section-label section-label--accent">06 — A free brand audit</span>
+    <h2 class="cta-band__hed">Thirty minutes. <em>One honest read.</em></h2>
+    <p class="cta-band__lede">Send the website, the deck, the last three campaigns. We'll come back with a written diagnosis — what's working, what's not, and whether a rebrand is what you actually need. No pitch on the call.</p>
+    <p style="margin-top:40px"><a class="btn btn--primary" href="contact.html">Book a free brand audit &nbsp;→</a></p>
+  </div>
+  <aside class="cta-band__side"><dl>
+    <div><dt>Format</dt><dd>30-minute call · written follow-up inside two days</dd></div>
+    <div><dt>Cost</dt><dd><em>None.</em> If we're not a fit, we say so on the call.</dd></div>
+    <div><dt>Capacity</dt><dd>3 engagement slots — Q3 2026</dd></div>
+    <div><dt>Practice</dt><dd>Solo, by appointment · New York</dd></div>
+  </dl></aside>
+</div></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="site-footer__row">
+    <div class="site-footer__brand"><span class="site-footer__mark">Artt<span style="color:var(--accent)">.</span></span><p class="site-footer__quote">"Strategy first. Everything else follows."</p></div>
+    <div class="footer-col"><h4>Practice</h4><ul><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
+    <div class="footer-col"><h4>Get in touch</h4><ul><li><a class="cta" href="contact.html">Book a brand audit →</a></li><li><a href="mailto:hello@arttbrand.co">hello@arttbrand.co</a></li></ul></div>
+  </div>
+  <div class="site-footer__meta"><span>© 2026 Artt Brand Company</span><span>By appointment · New York</span></div>
+</div></footer>
+</body></html>

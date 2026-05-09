@@ -1,0 +1,47 @@
+﻿<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Artt Brand Company</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.contact-page{padding-top:calc(140px * var(--density));padding-bottom:calc(120px * var(--density))}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:96px;align-items:start}
+.contact-aside{position:sticky;top:96px}
+.contact-aside__hed{font:500 clamp(40px,5vw,72px)/.96 var(--font-display);letter-spacing:-.02em;margin:0 0 32px}
+.contact-aside__hed em{font-style:italic;color:var(--accent)}
+.contact-aside__lede{font:300 16px/1.7 var(--font-body);color:var(--color-paper-soft);max-width:38ch;margin-bottom:48px}
+.contact-meta{display:flex;flex-direction:column;gap:24px;border-top:1px solid var(--color-hairline);padding-top:32px}
+.contact-meta dt{font:400 10px/1 var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:var(--fg-muted);margin-bottom:6px}
+.contact-meta dd{font:300 15px/1.5 var(--font-body);color:var(--color-paper);margin:0}
+.contact-meta dd em{font-family:var(--font-display);font-style:italic;color:var(--accent)}
+.contact-form{display:flex;flex-direction:column;gap:32px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-note{font:300 13px/1.6 var(--font-body);color:var(--fg-muted);margin-top:16px}
+@media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:56px}.contact-aside{position:static}.form-row{grid-template-columns:1fr}}
+</style></head><body>
+<header class="site-header"><div class="site-header__inner"><a class="site-header__mark" href="index.html">Artt<span class="mark-dot">.</span></a><nav class="site-nav"><a href="services.html">Services</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav><a class="btn btn--primary" href="contact.html">Book a brand audit</a></div></header>
+<main><section class="contact-page"><div class="wrap"><div class="contact-grid">
+  <aside class="contact-aside">
+    <span class="section-label section-label--accent">Free brand audit</span>
+    <h1 class="contact-aside__hed">Thirty minutes. <em>One honest read.</em></h1>
+    <p class="contact-aside__lede">Send us the website, the deck, the last three campaigns. We'll come back with a written diagnosis — what's working, what isn't, and whether a full engagement is what you actually need. No pitch on the call.</p>
+    <dl class="contact-meta">
+      <div><dt>Format</dt><dd>30-minute call · written follow-up inside two days</dd></div>
+      <div><dt>Cost</dt><dd><em>None.</em> If we're not a fit, we say so on the call.</dd></div>
+      <div><dt>Capacity</dt><dd>3 engagement slots — Q3 2026</dd></div>
+      <div><dt>Email</dt><dd><a href="mailto:hello@arttbrand.co" style="color:var(--accent)">hello@arttbrand.co</a></dd></div>
+    </dl>
+  </aside>
+  <form class="contact-form" name="brand-audit" method="POST" data-netlify="true" action="/thanks.html">
+    <input type="hidden" name="form-name" value="brand-audit">
+    <div class="form-row">
+      <div class="form-field"><label for="name">Your name</label><input type="text" id="name" name="name" required placeholder="First Last"></div>
+      <div class="form-field"><label for="email">Email address</label><input type="email" id="email" name="email" required placeholder="you@company.com"></div>
+    </div>
+    <div class="form-field"><label for="business">Business name</label><input type="text" id="business" name="business" required placeholder="Your company name"></div>
+    <div class="form-field"><label for="website">Website URL</label><input type="url" id="website" name="website" placeholder="https://yoursite.com"></div>
+    <div class="form-field"><label for="years">Years in business</label><select id="years" name="years" required><option value="" disabled selected>Select range</option><option value="1-2">1-2 years</option><option value="3-5">3-5 years</option><option value="5-10">5-10 years</option><option value="10+">10+ years</option></select></div>
+    <div class="form-field"><label for="challenge">What's your biggest brand challenge right now?</label><textarea id="challenge" name="challenge" required placeholder="Tell us what's not working — the more specific, the better."></textarea></div>
+    <div><button type="submit" class="btn btn--primary">Request my free brand audit</button><p class="form-note">By submitting this form, you agree to our <a href="privacy.html" style="color:var(--accent)">Privacy Policy</a>.</p></div>
+  </form>
+</div></div></section></main>
+<footer class="site-footer"><div class="wrap"><div class="site-footer__row"><div class="site-footer__brand"><span class="site-footer__mark">Artt<span style="color:var(--accent)">.</span></span><p class="site-footer__quote">"Strategy first. Everything else follows."</p></div><div class="footer-col"><h4>Practice</h4><ul><li><a href="services.html">Services</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Legal</h4><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div><div class="footer-col"><h4>Get in touch</h4><ul><li><a class="cta" href="contact.html">Book a brand audit</a></li><li><a href="mailto:hello@arttbrand.co">hello@arttbrand.co</a></li></ul></div></div><div class="site-footer__meta"><span>2026 Artt Brand Company</span><span>By appointment, New York</span></div></div></footer>
+</body></html>
