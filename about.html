@@ -45,29 +45,29 @@
 </div></header>
 <main>
 <section class="about-hero"><div class="wrap">
-  <span class="section-label section-label--accent">About the practice</span>
-  <h1 class="about-hero__hed">Strategy-first branding for small businesses that have <em>earned it.</em></h1>
-  <p class="t-body">Serious brand strategy has always been a big-agency thing. If you weren't spending six figures a year, you got a logo and were told to figure out the rest. That's the gap Artt Brand Company lives in.</p>
+  <span class="section-label section-label--accent" data-reveal="fade">About the practice</span>
+  <h1 class="about-hero__hed" data-reveal>Strategy-first branding for small businesses that have <em>earned it.</em></h1>
+  <p class="t-body" data-reveal style="--reveal-delay:80ms">Serious brand strategy has always been a big-agency thing. If you weren't spending six figures a year, you got a logo and were told to figure out the rest. That's the gap Artt Brand Company lives in.</p>
 </div></section>
 <section class="about-body"><div class="wrap"><div class="about-grid">
-  <aside class="about-aside">
+  <aside class="about-aside" data-reveal>
     <span class="section-label">The founder</span>
     <p class="about-aside__name">Rory Mitchell</p>
     <p class="about-aside__role">Brand Strategist<br>Artt Brand Company</p>
     <div class="about-portrait"><img src="rory-mitchell.jpg" alt="Rory Mitchell, founder of Artt Brand Company" loading="lazy"></div>
   </aside>
   <div class="about-content">
-    <div class="about-section">
+    <div class="about-section" data-reveal>
       <h2>Why Artt exists</h2>
       <p>Small business owners - the ones who are the vision, the talent, and the operator all at once - deserve access to the same quality of brand thinking that enterprise companies get. When small businesses thrive, communities thrive. We're quietly in the business of that.</p>
       <p>Most branding agencies start with aesthetics and work backward to meaning. We do the opposite. We come from <em>psychology and marketing</em> - not design. Every brand decision is rooted in how people think, feel, and decide.</p>
     </div>
-    <div class="about-section">
+    <div class="about-section" data-reveal style="--reveal-delay:80ms">
       <h2>How we think about branding</h2>
       <p>Branding is infrastructure, not decoration. We always lead with strategy before aesthetics - the why before the how it looks.</p>
       <p>The best brands make their owners feel joy, not just look credible. Success isn't a logo approval. It's a client who feels excited, inspired, and ready.</p>
     </div>
-    <div class="about-section">
+    <div class="about-section" data-reveal style="--reveal-delay:160ms">
       <h2>What working with us feels like</h2>
       <p>Not a cold agency. Not a yes-person freelancer. We show up like the smart friend who happens to have deep expertise - honest, warm, and genuinely invested in your success.</p>
       <p>Clients walk away saying things like: <em>"I have a clear understanding of what my business is going to be"</em> and <em>"Why has nobody told me this before?"</em></p>
@@ -76,13 +76,13 @@
   </div>
 </div></div></section>
 <section class="beliefs"><div class="wrap">
-  <span class="section-label">What we believe</span>
+  <span class="section-label" data-reveal="fade">What we believe</span>
   <ul class="beliefs__list">
-    <li class="belief"><span class="belief__num">01</span><div class="belief__body"><h3>Branding is infrastructure, not decoration.</h3><p>We always lead with strategy before aesthetics. The why before the how it looks. Visuals without positioning produce polished confusion.</p></div></li>
-    <li class="belief"><span class="belief__num">02</span><div class="belief__body"><h3>Small business owners are underserved by the branding industry.</h3><p>Artt exists in the gap - serious strategy, accessible relationship. You don't need an /month retainer to get brand thinking that works.</p></div></li>
-    <li class="belief"><span class="belief__num">03</span><div class="belief__body"><h3>Psychology drives better brand decisions than aesthetics alone.</h3><p>Every brand decision is rooted in how people think, feel, and decide - not just what looks good. Meaning before aesthetics, always.</p></div></li>
-    <li class="belief"><span class="belief__num">04</span><div class="belief__body"><h3>The best brands make their owners feel joy - not just look credible.</h3><p>Success isn't a logo approval. It's a client who feels excited, inspired, and ready to show up confidently.</p></div></li>
-    <li class="belief"><span class="belief__num">05</span><div class="belief__body"><h3>Consistency is the competitive advantage most small businesses haven't unlocked.</h3><p>Our deliverables aren't just assets - they're systems that make consistency possible without constant creative effort.</p></div></li>
+    <li class="belief" data-reveal style="--reveal-delay:0ms"><span class="belief__num">01</span><div class="belief__body"><h3>Branding is infrastructure, not decoration.</h3><p>We always lead with strategy before aesthetics. The why before the how it looks. Visuals without positioning produce polished confusion.</p></div></li>
+    <li class="belief" data-reveal style="--reveal-delay:80ms"><span class="belief__num">02</span><div class="belief__body"><h3>Small business owners are underserved by the branding industry.</h3><p>Artt exists in the gap - serious strategy, accessible relationship. You don't need a large monthly retainer to get brand thinking that works.</p></div></li>
+    <li class="belief" data-reveal style="--reveal-delay:160ms"><span class="belief__num">03</span><div class="belief__body"><h3>Psychology drives better brand decisions than aesthetics alone.</h3><p>Every brand decision is rooted in how people think, feel, and decide - not just what looks good. Meaning before aesthetics, always.</p></div></li>
+    <li class="belief" data-reveal style="--reveal-delay:240ms"><span class="belief__num">04</span><div class="belief__body"><h3>The best brands make their owners feel joy - not just look credible.</h3><p>Success isn't a logo approval. It's a client who feels excited, inspired, and ready to show up confidently.</p></div></li>
+    <li class="belief" data-reveal style="--reveal-delay:320ms"><span class="belief__num">05</span><div class="belief__body"><h3>Consistency is the competitive advantage most small businesses haven't unlocked.</h3><p>Our deliverables aren't just assets - they're systems that make consistency possible without constant creative effort.</p></div></li>
   </ul>
 </div></section>
 </main>
@@ -96,4 +96,5 @@
   <div class="site-footer__meta"><span>&copy; <script>document.write(new Date().getFullYear())</script> Artt Brand Company</span><span>By appointment &middot; New York</span></div>
 </div></footer>
 <script>document.querySelector('.nav-toggle').addEventListener('click',function(){const n=document.querySelector('.site-nav');const open=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',!open);n.classList.toggle('is-open')});</script>
+<script src="reveal.js"></script>
 </body></html>
