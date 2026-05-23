@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — ResumeForge AI</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ResumeForge AI brand overrides */
+    :root {
+      --rf-primary:    #1D4ED8;
+      --rf-primary-dk: #1E3A8A;
+      --rf-accent:     #06B6D4;
+      --rf-ember:      #EA580C;
+      --rf-bg:         #F8FAFF;
+      --rf-surface:    #FFFFFF;
+      --rf-text:       #0F172A;
+      --rf-muted:      #475569;
+      --rf-border:     #E2E8F0;
+    }
+
+    body {
+      background: var(--rf-bg);
+      color: var(--rf-text);
+      font-family: "Jost", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* ── Header ── */
+    .rf-header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(248, 250, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rf-border);
+    }
+    .rf-header__inner {
+      max-width: 1320px;
+      margin-inline: auto;
+      padding-inline: clamp(24px, 5vw, 80px);
+      height: 68px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .rf-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .rf-logo__icon {
+      width: 32px;
+      height: 32px;
+      background: var(--rf-primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .rf-logo__icon svg {
+      width: 18px;
+      height: 18px;
+      fill: #fff;
+    }
+    .rf-logo__name {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--rf-text);
+      letter-spacing: -0.01em;
+    }
+    .rf-logo__name span {
+      color: var(--rf-primary);
+    }
+    .rf-header__badge {
+      margin-left: auto;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rf-muted);
+      font-family: "Inconsolata", monospace;
+    }
+
+    /* ── Content ── */
+    main { padding-top: 68px; }
+
+    .legal {
+      max-width: 72ch;
+      margin-inline: auto;
+      padding: clamp(48px, 8vw, 96px) clamp(24px, 5vw, 80px);
+    }
+
+    .legal__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--rf-primary);
+      font-family: "Inconsolata", monospace;
+      margin-bottom: 20px;
+    }
+    .legal__eyebrow::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--rf-accent);
+      border-radius: 2px;
+    }
+
+    .legal h1 {
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 700;
+      color: var(--rf-text);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .legal__updated {
+      display: block;
+      font-size: 11px;
+      font-family: "Inconsolata", monospace;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rf-muted);
+      margin-bottom: 56px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--rf-border);
+    }
+
+    .legal h2 {
+      font-size: clamp(17px, 1.8vw, 21px);
+      font-weight: 600;
+      color: var(--rf-text);
+      margin: 48px 0 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .legal p,
+    .legal li {
+      font-size: 15.5px;
+      line-height: 1.8;
+      color: var(--rf-muted);
+      margin-bottom: 14px;
+    }
+
+    .legal ul {
+      padding-left: 20px;
+      list-style: disc;
+    }
+
+    .legal ul li { margin-bottom: 8px; }
+
+    .legal a {
+      color: var(--rf-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .legal a:hover { color: var(--rf-primary-dk); }
+
+    .info-box {
+      background: #EFF6FF;
+      border-left: 3px solid var(--rf-primary);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+    }
+    .info-box p {
+      margin: 0;
+      font-size: 14.5px;
+      color: #1E40AF;
+    }
+
+    /* ── Footer ── */
+    .rf-footer {
+      border-top: 1px solid var(--rf-border);
+      padding: 48px 0 36px;
+      background: var(--rf-surface);
+    }
+    .rf-footer__inner {
+      max-width: 1320px;
+      margin-inline: auto;
+      padding-inline: clamp(24px, 5vw, 80px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .rf-footer__brand {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--rf-text);
+    }
+    .rf-footer__brand span { color: var(--rf-primary); }
+    .rf-footer__links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .rf-footer__links a {
+      font-size: 12px;
+      font-family: "Inconsolata", monospace;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rf-muted);
+      text-decoration: none;
+      transition: color 0.18s;
+    }
+    .rf-footer__links a:hover { color: var(--rf-primary); }
+    .rf-footer__copy {
+      font-size: 12px;
+      color: #94A3B8;
+      width: 100%;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rf-border);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="rf-header">
+  <div class="rf-header__inner">
+    <a class="rf-logo" href="https://resumeforgeai.com">
+      <div class="rf-logo__icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/>
+        </svg>
+      </div>
+      <span class="rf-logo__name">ResumeForge <span>AI</span></span>
+    </a>
+    <span class="rf-header__badge">Legal</span>
+  </div>
+</header>
+
+<!-- Content -->
+<main>
+  <div class="legal">
+    <span class="legal__eyebrow">ResumeForge AI</span>
+    <h1>Privacy Policy</h1>
+    <span class="legal__updated">Last updated: May 23, 2026</span>
+
+    <div class="info-box">
+      <p>ResumeForge AI is committed to protecting your privacy. This policy explains what data we collect, why we collect it, and how you can control it.</p>
+    </div>
+
+    <h2>1. Who We Are</h2>
+    <p>ResumeForge AI is a mobile application developed and operated by <strong>Mitchell Strategic Solutions LLC</strong>. The app helps job seekers create ATS-optimized resumes and tailored cover letters using artificial intelligence.</p>
+    <p>For privacy inquiries, contact us at <a href="mailto:privacy@resumeforgeai.com">privacy@resumeforgeai.com</a>.</p>
+
+    <h2>2. Information We Collect</h2>
+
+    <p><strong>Account Information</strong></p>
+    <p>When you sign in with Google, we receive your name and email address from your Google account. We use this to identify you and associate your documents with your account.</p>
+
+    <p><strong>Resume and Job Description Data</strong></p>
+    <p>You upload your resume (PDF or DOCX format) and provide a job description. We process these to generate ATS-optimized outputs. Your uploaded files and the AI-generated results are stored securely in your account so you can access and re-export them.</p>
+
+    <p><strong>Usage Data</strong></p>
+    <p>We track how many resume generations you have used in the current billing month to enforce free tier limits and manage your subscription.</p>
+
+    <p><strong>Device and Analytics Data</strong></p>
+    <p>We may collect basic device information (operating system, app version) and usage analytics (screens visited, features used) to improve the app. This data is anonymized and does not identify you personally.</p>
+
+    <p><strong>Payment Information</strong></p>
+    <p>If you subscribe to a paid plan or make a purchase, payment processing is handled by RevenueCat and the relevant app store (Google Play or Apple App Store). We do not store your credit card or payment details on our servers.</p>
+
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li>To authenticate you and maintain your account</li>
+      <li>To process your resume and job description through our AI pipeline and return optimized results</li>
+      <li>To store your generation history so you can re-export past documents</li>
+      <li>To enforce usage limits on free tier accounts</li>
+      <li>To verify your subscription status and unlock paid features</li>
+      <li>To improve app performance, fix bugs, and develop new features</li>
+      <li>To comply with legal obligations</li>
+    </ul>
+    <p>We do not sell, rent, or share your personal information or resume data with third parties for marketing purposes.</p>
+
+    <h2>4. AI Processing</h2>
+    <p>Your resume text and job description are sent to <strong>Anthropic</strong> (the maker of Claude AI) for processing. Anthropic processes this data to generate your optimized resume and cover letter. Anthropic's data handling is governed by their <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+    <p>We do not use your resume data to train AI models.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <ul>
+      <li><strong>Supabase</strong> — Authentication, database, and file storage. Your account data, resume files, and generation history are stored on Supabase-managed infrastructure.</li>
+      <li><strong>Anthropic (Claude AI)</strong> — AI processing of your resume and job description to generate optimized outputs.</li>
+      <li><strong>Google</strong> — Sign-in via Google OAuth. Your Google account name and email are shared with us upon sign-in.</li>
+      <li><strong>RevenueCat</strong> — Subscription and in-app purchase management. RevenueCat processes your purchase data subject to their privacy policy.</li>
+      <li><strong>Google Play / Apple App Store</strong> — App distribution and payment processing for subscriptions.</li>
+      <li><strong>Railway</strong> — Cloud hosting for our backend API. Data in transit is encrypted via TLS.</li>
+    </ul>
+
+    <h2>6. Data Storage and Security</h2>
+    <p>Your data is stored in Supabase's managed PostgreSQL database and file storage, hosted on AWS infrastructure. All data in transit is encrypted using TLS. Access to your data is restricted by row-level security policies — you can only access your own documents.</p>
+    <p>We take reasonable technical and organizational measures to protect your information. However, no method of internet transmission or electronic storage is 100% secure.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>We retain your account data and generation history for as long as your account is active. If you delete your account, we will delete your personal data and associated documents within 30 days, except where retention is required by law.</p>
+    <p>Uploaded resume files are stored only as extracted text — the original PDF or DOCX file is not permanently stored after processing.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction of inaccurate data</li>
+      <li>Request deletion of your account and associated data</li>
+      <li>Export your generation history</li>
+      <li>Withdraw consent at any time by deleting your account</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:privacy@resumeforgeai.com">privacy@resumeforgeai.com</a>.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>ResumeForge AI is not directed at children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date at the top of this page. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>11. Contact</h2>
+    <p>
+      <strong>Mitchell Strategic Solutions LLC</strong><br>
+      ResumeForge AI<br>
+      Email: <a href="mailto:privacy@resumeforgeai.com">privacy@resumeforgeai.com</a>
+    </p>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="rf-footer">
+  <div class="rf-footer__inner">
+    <div class="rf-footer__brand">ResumeForge <span>AI</span></div>
+    <ul class="rf-footer__links">
+      <li><a href="mailto:privacy@resumeforgeai.com">Contact</a></li>
+      <li><a href="resumeforge-privacy.html">Privacy</a></li>
+    </ul>
+    <p class="rf-footer__copy">&copy; <script>document.write(new Date().getFullYear())</script> Mitchell Strategic Solutions LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
